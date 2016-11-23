@@ -1,6 +1,12 @@
 set fish_greeting ""
 bind \ct kill-word
 
+function greet
+  fortune | cowsay
+end
+
+greet
+
 function fish_prompt
   set_color $fish_color_cwd
   echo -n (prompt_pwd)
@@ -57,6 +63,3 @@ function gremote
     git remote -v
 end
 
-alias vim "nvim"
-
-test -s /home/tushar/.nvm-fish/nvm.fish; and source /home/tushar/.nvm-fish/nvm.fish
