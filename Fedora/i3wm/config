@@ -160,3 +160,12 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Pulse Audio controls
+ bindsym XF86AudioRaiseVolume exec "amixer -c 1 set Speaker 10+"
+ bindsym XF86AudioLowerVolume exec "amixer -c 1 set Speaker 10-"
+ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+
+# Sreen brightness controls
+ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
