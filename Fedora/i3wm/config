@@ -35,18 +35,22 @@ bindsym $mod+Return exec gnome-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# Autostart programs
+
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # set wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallpaper.png
+# exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallpaper.png
 
-# set Conky
-exec --no-startup-id conky -c ~/config/conky/.conkyrc
+# Network manager and bluetooth.
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 
 # change focus
 bindsym $mod+j focus left
@@ -126,6 +130,9 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
+# Take screenshot.
+bindsym Print exec gnome-screenshot -i
 
 # Lock the screen with background as gausian blur applied on screenshot.
 bindsym Control+$mod+l exec lock
