@@ -1,4 +1,6 @@
 set fish_greeting ""
+set PATH ~/.local/bin/ $PATH
+
 bind \ct kill-word
 
 function greet
@@ -62,4 +64,3 @@ end
 function gremote
     git remote -v
 end
-

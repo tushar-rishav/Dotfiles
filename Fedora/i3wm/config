@@ -46,7 +46,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # set wallpaper
-# exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wallpaper.png
+exec --no-startup-id feh --bg-scale /home/tushar/Pictures/chords.png
 
 # Network manager and bluetooth.
 exec --no-startup-id nm-applet
