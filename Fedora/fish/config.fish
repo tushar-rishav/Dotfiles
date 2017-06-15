@@ -1,13 +1,6 @@
 set fish_greeting ""
-set PATH ~/.local/bin/ $PATH
 
 bind \ct kill-word
-
-function greet
-  fortune | cowsay
-end
-
-greet
 
 function fish_prompt
   set_color $fish_color_cwd
@@ -16,12 +9,30 @@ function fish_prompt
   echo -n ' % '
 end
 
+# fedora
 function dnfi
   sudo dnf install $argv
 end
 
 function dnfs
   sudo dnf search $argv
+end
+
+# mac
+function hbi
+  brew install $arg
+end
+
+function hbup
+  brew update $arg
+end
+
+function hbs
+  brew search $arg
+end
+
+function hbui
+  brew uninstall $arg
 end
 
 function vimu
